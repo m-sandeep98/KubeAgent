@@ -1,0 +1,79 @@
+site_name: KubeAgent
+site_description: AI-Powered Kubernetes Service Management
+site_url: https://m-sandeep98.github.io/KubeAgent
+repo_url: https://github.com/m-sandeep98/KubeAgent.git
+repo_name: m-sandeep98/KubeAgent
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - search.share
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - admonition
+  - footnotes
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append("docs")
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Intro: getting-started/Intro.md
+    - System Architecture: getting-started/system-architecture.md
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quickstart.md
+    - Configuration: getting-started/configuration.md
+  - User Guide:
+    - Basic Usage: user-guide/basic-usage.md
+    - Natural Language Commands: user-guide/nl-commands.md
+    - Plugin System: user-guide/plugins.md
+  - Plugins:
+    - Docker Plugin: plugins/docker.md
+    - Kubernetes Plugin: plugins/kubernetes.md
+    - Code Generation: plugins/code-generation.md
+    - Manifest Validator: plugins/manifest-validator.md
+  - API Reference:
+    - Core API: api/core.md
+    - Plugin API: api/plugins.md
+  - Contributing:
+    - Contributing Guide: contributing/guide.md
+    - Development Setup: contributing/development.md
+    - Code Style: contributing/code-style.md
+  - Changelog: changelog.md
