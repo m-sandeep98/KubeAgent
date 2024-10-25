@@ -1,4 +1,11 @@
+
 # KubeAgent: AI-Powered Kubernetes Service Management
+
+
+## 📅 Development Roadmap
+
+[Notion Notebook](https://almond-moss-7cd.notion.site/12843209b12e80529304dad524474c9a?v=12843209b12e80bbb05f000c17056ff6&pvs=4)
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
@@ -31,8 +38,3 @@ KubeAgent follows a modular plugin-based architecture:
 │    Plugin    │ │    Plugin    │ │   Generator  │ │  Validator   │
 └──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘
 ```
-
-
-### Development Roadmap
-
-[Notion Notebook](https://almond-moss-7cd.notion.site/12843209b12e80529304dad524474c9a?v=12843209b12e80bbb05f000c17056ff6&pvs=4)
