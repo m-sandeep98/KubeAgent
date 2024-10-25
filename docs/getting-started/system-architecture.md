@@ -14,21 +14,21 @@ graph TB
     GitAPI[GitHub API]
     DockerAPI[Docker Daemon]
     Registry[Container Registry]
-    
+
     UI --> MainAgent
     MainAgent --> K8sAgent
     MainAgent --> CodeAgent
     MainAgent --> GitAgent
     MainAgent --> ValidatorAgent
     MainAgent --> DockerAgent
-    
+
     K8sAgent --> K8sAPI
     GitAgent --> GitAPI
     DockerAgent --> DockerAPI
     DockerAgent --> Registry
-    
+
     CodeAgent -.-> DockerAgent
-    
+
     subgraph Plugins
         K8sAgent
         CodeAgent
