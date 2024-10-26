@@ -3,56 +3,42 @@
 
 ```mermaid
 graph TB
-    UI[Web Interface / Form UI]
-    MainAgent[Main Orchestrator Agent]
-    K8sAgent[Kubernetes Management Agent]
-    CodeAgent[Code Generation Agent]
-    GitAgent[GitHub Integration Agent]
-    ValidatorAgent[K8s Manifest Validator Agent]
-    DockerAgent[Docker Management Agent]
-    K8sAPI[Kubernetes API]
-    GitAPI[GitHub API]
-    DockerAPI[Docker Daemon]
-    Registry[Container Registry]
+    UI[Web Interface / API]
+    MainOrch[Main Orchestrator]
+    AgentFramework[Agent Framework]
 
-    UI --> MainAgent
-    MainAgent --> K8sAgent
-    MainAgent --> CodeAgent
-    MainAgent --> GitAgent
-    MainAgent --> ValidatorAgent
-    MainAgent --> DockerAgent
-
-    K8sAgent --> K8sAPI
-    GitAgent --> GitAPI
-    DockerAgent --> DockerAPI
-    DockerAgent --> Registry
-
-    CodeAgent -.-> DockerAgent
-
-    subgraph Plugins
-        K8sAgent
-        CodeAgent
-        GitAgent
-        ValidatorAgent
-        DockerAgent
+    subgraph "AI Agents"
+        Agent1[Agent1]
+        Agent2[Agent2]
+        CustomAgent[Agent3]
     end
-```
 
+    subgraph "Plugin Tools"
+        Internal[Internal Tools]
+        Sidecar[Sidecar Tools]
+    end
 
+    subgraph "External Services"
+        K8sAPI[Kubernetes API]
+        GitAPI[GitHub API]
+        DockerAPI[Docker Daemon]
+        CustomTools[CustomTools]
+    end
 
-### Plugin Architecture
-KubeAgent follows a modular plugin-based architecture:
+    UI --> MainOrch
+    MainOrch --> AgentFramework
+    AgentFramework --> Agent1
+    AgentFramework --> Agent2
+    AgentFramework --> CustomAgent
 
-```
-┌──────────────┐     ┌─────────────────┐
-│   Web UI/    │     │      Main       │
-│    CLI       │────▶│   Orchestrator  │
-└──────────────┘     └────────┬────────┘
-                              │
-        ┌──────────────┬──────┴───────┬──────────────┐
-        ▼              ▼              ▼              ▼
-┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-│    Docker    │ │  Kubernetes  │ │     Code     │ │   Manifest   │
-│    Plugin    │ │    Plugin    │ │   Generator  │ │  Validator   │
-└──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘
+    Agent1 --> Internal
+
+    Agent2 --> Internal
+    CustomAgent -.-> Internal
+    CustomAgent -.-> Sidecar
+
+    Internal --> K8sAPI
+    Internal --> GitAPI
+    Sidecar --> DockerAPI
+    Sidecar --> CustomTools
 ```
