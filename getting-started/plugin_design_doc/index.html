@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://m-sandeep98.github.io/KubeAgent/getting-started/Intro/">
+        <link rel="canonical" href="https://m-sandeep98.github.io/KubeAgent/getting-started/plugin_design_doc/">
       
       
-        <link rel="prev" href="../..">
-      
-      
-        <link rel="next" href="../system-architecture/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +20,7 @@
     
     
       
-        <title>Intro - KubeAgent</title>
+        <title>Plugin design doc - KubeAgent</title>
       
     
     
@@ -77,11 +73,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#kubeagent-ai-powered-kubernetes-service-management" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -112,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro
+              Plugin design doc
             
           </span>
         </div>
@@ -239,13 +230,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../Intro.md" class="md-tabs__link">
           
   
   Getting Started
@@ -414,30 +403,27 @@
       
   
   
-    
   
   
-  
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -448,7 +434,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Getting Started
@@ -459,30 +445,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Intro
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -491,188 +457,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌟 Key Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏗️ Architecture
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Getting Started
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quick Start
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      💡 Usage Examples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="💡 Usage Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#natural-language-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Natural Language Commands
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plugin-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plugin Usage
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plugin-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔌 Plugin System
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contributing" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤝 Contributing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🤝 Contributing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#development-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Development Setup
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roadmap" class="md-nav__link">
-    <span class="md-ellipsis">
-      📅 Roadmap
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      📜 License
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      🙋‍♂️ Support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#acknowledgments" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌟 Acknowledgments
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1254,178 +1038,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#key-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌟 Key Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      🏗️ Architecture
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      🚀 Getting Started
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🚀 Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quick-start" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quick Start
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#usage-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      💡 Usage Examples
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="💡 Usage Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#natural-language-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Natural Language Commands
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plugin-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plugin Usage
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plugin-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔌 Plugin System
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contributing" class="md-nav__link">
-    <span class="md-ellipsis">
-      🤝 Contributing
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🤝 Contributing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#development-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Development Setup
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#roadmap" class="md-nav__link">
-    <span class="md-ellipsis">
-      📅 Roadmap
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    <span class="md-ellipsis">
-      📜 License
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#support" class="md-nav__link">
-    <span class="md-ellipsis">
-      🙋‍♂️ Support
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#acknowledgments" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌟 Acknowledgments
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1443,169 +1055,9 @@
   
 
 
-<h1 id="kubeagent-ai-powered-kubernetes-service-management">KubeAgent: AI-Powered Kubernetes Service Management<a class="headerlink" href="#kubeagent-ai-powered-kubernetes-service-management" title="Permanent link">&para;</a></h1>
-<p><a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
-<a href="https://www.python.org/downloads/"><img alt="Python 3.11+" src="https://img.shields.io/badge/python-3.11+-blue.svg" /></a></p>
-<p>KubeAgent is an AI-powered orchestration system that simplifies Kubernetes service management through natural language interactions and automated workflows. It provides a modular, plugin-based architecture for managing containers, deploying services, and generating application code.</p>
-<h2 id="key-features">🌟 Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Natural Language Interface</strong>: Interact with your Kubernetes cluster using plain English commands</li>
-<li><strong>Automated Service Management</strong>: Deploy and manage services with intelligent automation</li>
-<li><strong>Code Generation</strong>: Generate FastAPI and Streamlit applications from descriptions</li>
-<li><strong>Docker Integration</strong>: Build and manage container images seamlessly</li>
-<li><strong>Plugin Architecture</strong>: Extensible system for adding new capabilities</li>
-<li><strong>Local Development</strong>: Built-in support for Minikube environments</li>
-</ul>
-<h2 id="architecture">🏗️ Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
-<p>KubeAgent follows a modular plugin-based architecture:</p>
-<div class="highlight"><pre><span></span><code>┌──────────────┐     ┌─────────────────┐
-│   Web UI/    │     │      Main       │
-│    CLI       │────▶│   Orchestrator  │
-└──────────────┘     └────────┬────────┘
-                              │
-        ┌──────────────┬──────┴───────┬──────────────┐
-        ▼              ▼              ▼              ▼
-┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-│    Docker    │ │  Kubernetes  │ │     Code     │ │   Manifest   │
-│    Plugin    │ │    Plugin    │ │   Generator  │ │  Validator   │
-└──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘
-</code></pre></div>
-<h2 id="getting-started">🚀 Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
-<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Python 3.11+</li>
-<li>Docker</li>
-<li>Minikube</li>
-<li>kubectl</li>
-</ul>
-<h3 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Clone the repository</span>
-git<span class="w"> </span>clone<span class="w"> </span>https://github.com/yourusername/kubeagent.git
-<span class="nb">cd</span><span class="w"> </span>kubeagent
+  <h1>Plugin design doc</h1>
 
-<span class="c1"># Install dependencies</span>
-poetry<span class="w"> </span>install
 
-<span class="c1"># Start the service</span>
-poetry<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>kubeagent
-</code></pre></div>
-<h3 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h3>
-<ol>
-<li>
-<p><strong>Start Local Environment</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Start Minikube</span>
-minikube<span class="w"> </span>start
-
-<span class="c1"># Verify connection</span>
-kubeagent<span class="w"> </span>verify-connection
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Deploy a Sample Application</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Using natural language</span>
-kubeagent<span class="w"> </span>deploy<span class="w"> </span><span class="s2">&quot;Create a FastAPI hello world service with 2 replicas&quot;</span>
-
-<span class="c1"># Using configuration</span>
-kubeagent<span class="w"> </span>deploy<span class="w"> </span>-f<span class="w"> </span>examples/fastapi-hello.yaml
-</code></pre></div></p>
-</li>
-<li>
-<p><strong>Generate Code</strong>
-<div class="highlight"><pre><span></span><code><span class="c1"># Generate a Streamlit dashboard</span>
-kubeagent<span class="w"> </span>generate<span class="w"> </span><span class="s2">&quot;Create a dashboard showing cluster metrics&quot;</span>
-</code></pre></div></p>
-</li>
-</ol>
-<h2 id="usage-examples">💡 Usage Examples<a class="headerlink" href="#usage-examples" title="Permanent link">&para;</a></h2>
-<h3 id="natural-language-commands">Natural Language Commands<a class="headerlink" href="#natural-language-commands" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Deploy a service</span>
-kubeagent:<span class="w"> </span><span class="s2">&quot;Deploy a Redis service with 3 replicas and persistent storage&quot;</span>
-
-<span class="c1"># Generate an application</span>
-kubeagent:<span class="w"> </span><span class="s2">&quot;Create a FastAPI service for user authentication with JWT&quot;</span>
-
-<span class="c1"># Build a container</span>
-kubeagent:<span class="w"> </span><span class="s2">&quot;Build a Python container with FastAPI and scikit-learn&quot;</span>
-</code></pre></div>
-<h3 id="plugin-usage">Plugin Usage<a class="headerlink" href="#plugin-usage" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kubeagent.plugins.docker</span> <span class="kn">import</span> <span class="n">DockerPlugin</span>
-<span class="kn">from</span> <span class="nn">kubeagent.plugins.kubernetes</span> <span class="kn">import</span> <span class="n">K8sPlugin</span>
-
-<span class="c1"># Use Docker plugin</span>
-<span class="n">docker</span> <span class="o">=</span> <span class="n">DockerPlugin</span><span class="p">()</span>
-<span class="n">docker</span><span class="o">.</span><span class="n">build_image</span><span class="p">(</span><span class="s2">&quot;./myapp&quot;</span><span class="p">,</span> <span class="s2">&quot;myapp:latest&quot;</span><span class="p">)</span>
-
-<span class="c1"># Use Kubernetes plugin</span>
-<span class="n">k8s</span> <span class="o">=</span> <span class="n">K8sPlugin</span><span class="p">()</span>
-<span class="n">k8s</span><span class="o">.</span><span class="n">deploy_service</span><span class="p">(</span><span class="s2">&quot;myapp&quot;</span><span class="p">,</span> <span class="n">replicas</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-</code></pre></div>
-<h2 id="plugin-system">🔌 Plugin System<a class="headerlink" href="#plugin-system" title="Permanent link">&para;</a></h2>
-<p>KubeAgent uses a plugin architecture for extensibility. Core plugins include:</p>
-<ol>
-<li><strong>Docker Plugin</strong></li>
-<li>Image building and management</li>
-<li>Registry interactions</li>
-<li>
-<p>Build optimization</p>
-</li>
-<li>
-<p><strong>Kubernetes Plugin</strong></p>
-</li>
-<li>Service deployment</li>
-<li>Resource management</li>
-<li>
-<p>Status monitoring</p>
-</li>
-<li>
-<p><strong>Code Generation Plugin</strong></p>
-</li>
-<li>FastAPI application generation</li>
-<li>Streamlit dashboard creation</li>
-<li>
-<p>GitHub repository integration</p>
-</li>
-<li>
-<p><strong>Manifest Validator Plugin</strong></p>
-</li>
-<li>Configuration validation</li>
-<li>Resource optimization</li>
-<li>Best practices checking</li>
-</ol>
-<h2 id="contributing">🤝 Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
-<p>We welcome contributions! See our <a href="CONTRIBUTING.md">Contributing Guide</a> for details.</p>
-<h3 id="development-setup">Development Setup<a class="headerlink" href="#development-setup" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># Setup development environment</span>
-make<span class="w"> </span>setup-dev
-
-<span class="c1"># Run tests</span>
-make<span class="w"> </span><span class="nb">test</span>
-
-<span class="c1"># Run linting</span>
-make<span class="w"> </span>lint
-</code></pre></div>
-<h2 id="roadmap">📅 Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h2>
-<ul>
-<li>[] Project Setup &amp; Core Infrastructure (Oct 24 - Oct 31, 2024)</li>
-<li>[ ] Plugin Architecture Implementation (Nov 1 - Nov 7, 2024)</li>
-<li>[ ] Basic UI &amp; Command Interface (Nov 7 - Nov 14, 2024)</li>
-<li>[ ] Core Plugins Development (Nov 14 - Dec 5, 2024)</li>
-<li>[ ] Integration &amp; Testing (Dec 5 - Dec 12, 2024)</li>
-<li>[ ] Documentation &amp; Release (Dec 12 - Dec 24, 2024)</li>
-</ul>
-<h2 id="license">📜 License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
-<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
-<h2 id="support">🙋‍♂️ Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
-<ul>
-<li>📚 <a href="https://kubeagent.readthedocs.io/">Documentation</a></li>
-<li>💬 <a href="https://discord.gg/kubeagent">Discord Community</a></li>
-<li>🐛 <a href="https://github.com/yourusername/kubeagent/issues">Issue Tracker</a></li>
-</ul>
-<h2 id="acknowledgments">🌟 Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permanent link">&para;</a></h2>
-<ul>
-<li>OpenAI for LLM capabilities</li>
-<li>Kubernetes community</li>
-<li>All our contributors</li>
-</ul>
 
 
 

@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://m-sandeep98.github.io/KubeAgent/getting-started/system-architecture/">
       
       
-        <link rel="prev" href="../Intro/">
+        <link rel="prev" href="../..">
       
       
         <link rel="next" href="../../changelog/">
@@ -245,7 +245,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../Intro/" class="md-tabs__link">
+        <a href="../Intro.md" class="md-tabs__link">
           
   
   Getting Started
@@ -462,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Intro/" class="md-nav__link">
+      <a href="../Intro.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -528,15 +528,6 @@
   <a href="#high-level-design" class="md-nav__link">
     <span class="md-ellipsis">
       High Level Design
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plugin-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plugin Architecture
     </span>
   </a>
   
@@ -1122,15 +1113,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#plugin-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plugin Architecture
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1153,53 +1135,44 @@
 
 <h3 id="high-level-design">High Level Design<a class="headerlink" href="#high-level-design" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>graph TB
-    UI[Web Interface / Form UI]
-    MainAgent[Main Orchestrator Agent]
-    K8sAgent[Kubernetes Management Agent]
-    CodeAgent[Code Generation Agent]
-    GitAgent[GitHub Integration Agent]
-    ValidatorAgent[K8s Manifest Validator Agent]
-    DockerAgent[Docker Management Agent]
-    K8sAPI[Kubernetes API]
-    GitAPI[GitHub API]
-    DockerAPI[Docker Daemon]
-    Registry[Container Registry]
+    UI[Web Interface / API]
+    MainOrch[Main Orchestrator]
+    AgentFramework[Agent Framework]
 
-    UI --&gt; MainAgent
-    MainAgent --&gt; K8sAgent
-    MainAgent --&gt; CodeAgent
-    MainAgent --&gt; GitAgent
-    MainAgent --&gt; ValidatorAgent
-    MainAgent --&gt; DockerAgent
+    subgraph "AI Agents"
+        Agent1[Agent1]
+        Agent2[Agent2]
+        CustomAgent[Agent3]
+    end
 
-    K8sAgent --&gt; K8sAPI
-    GitAgent --&gt; GitAPI
-    DockerAgent --&gt; DockerAPI
-    DockerAgent --&gt; Registry
+    subgraph "Plugin Tools"
+        Internal[Internal Tools]
+        Sidecar[Sidecar Tools]
+    end
 
-    CodeAgent -.-&gt; DockerAgent
+    subgraph "External Services"
+        K8sAPI[Kubernetes API]
+        GitAPI[GitHub API]
+        DockerAPI[Docker Daemon]
+        CustomTools[CustomTools]
+    end
 
-    subgraph Plugins
-        K8sAgent
-        CodeAgent
-        GitAgent
-        ValidatorAgent
-        DockerAgent
-    end</code></pre>
-<h3 id="plugin-architecture">Plugin Architecture<a class="headerlink" href="#plugin-architecture" title="Permanent link">&para;</a></h3>
-<p>KubeAgent follows a modular plugin-based architecture:</p>
-<div class="highlight"><pre><span></span><code>┌──────────────┐     ┌─────────────────┐
-│   Web UI/    │     │      Main       │
-│    CLI       │────▶│   Orchestrator  │
-└──────────────┘     └────────┬────────┘
-                              │
-        ┌──────────────┬──────┴───────┬──────────────┐
-        ▼              ▼              ▼              ▼
-┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-│    Docker    │ │  Kubernetes  │ │     Code     │ │   Manifest   │
-│    Plugin    │ │    Plugin    │ │   Generator  │ │  Validator   │
-└──────────────┘ └──────────────┘ └──────────────┘ └──────────────┘
-</code></pre></div>
+    UI --&gt; MainOrch
+    MainOrch --&gt; AgentFramework
+    AgentFramework --&gt; Agent1
+    AgentFramework --&gt; Agent2
+    AgentFramework --&gt; CustomAgent
+
+    Agent1 --&gt; Internal
+
+    Agent2 --&gt; Internal
+    CustomAgent -.-&gt; Internal
+    CustomAgent -.-&gt; Sidecar
+
+    Internal --&gt; K8sAPI
+    Internal --&gt; GitAPI
+    Sidecar --&gt; DockerAPI
+    Sidecar --&gt; CustomTools</code></pre>
 
 
 

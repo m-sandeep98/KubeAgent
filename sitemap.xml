@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://m-sandeep98.github.io/KubeAgent/</loc>
-         <lastmod>2024-10-25</lastmod>
+         <lastmod>2024-10-26</lastmod>
     </url>
     <url>
          <loc>https://m-sandeep98.github.io/KubeAgent/changelog/</loc>
-         <lastmod>2024-10-25</lastmod>
+         <lastmod>2024-10-26</lastmod>
     </url>
     <url>
-         <loc>https://m-sandeep98.github.io/KubeAgent/getting-started/Intro/</loc>
-         <lastmod>2024-10-25</lastmod>
+         <loc>https://m-sandeep98.github.io/KubeAgent/getting-started/plugin_design_doc/</loc>
+         <lastmod>2024-10-26</lastmod>
     </url>
     <url>
          <loc>https://m-sandeep98.github.io/KubeAgent/getting-started/system-architecture/</loc>
-         <lastmod>2024-10-25</lastmod>
+         <lastmod>2024-10-26</lastmod>
+    </url>
+    <url>
+         <loc>https://m-sandeep98.github.io/KubeAgent/getting-started/system_design_doc/</loc>
+         <lastmod>2024-10-26</lastmod>
     </url>
 </urlset>
